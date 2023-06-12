@@ -24,7 +24,7 @@
 
 <!-- {Make a list of websites that you found helpful in this project} -->
 * [Real Python - Django Tutorial](https://realpython.com/get-started-with-django-1/)
-* [Web Site Name](http://url.link.goes.here)
+* [Programming with Mosh Django Tutorial](https://www.youtube.com/watch?v=rHux0gMZ3Eg)
 
 # Future Work
 
