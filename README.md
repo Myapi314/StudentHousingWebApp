@@ -23,12 +23,21 @@
 # Useful Websites
 
 <!-- {Make a list of websites that you found helpful in this project} -->
-* [Real Python - Django Tutorial](https://realpython.com/get-started-with-django-1/)
-* [Programming with Mosh Django Tutorial](https://www.youtube.com/watch?v=rHux0gMZ3Eg)
+
+- [Real Python - Django Tutorial](https://realpython.com/get-started-with-django-1/)
+- [Programming with Mosh Django Tutorial](https://www.youtube.com/watch?v=rHux0gMZ3Eg)
+- [Programming with Mosh React Tutorial]()
+- [Babel](https://babeljs.io/)
+- [Bootstrap Docs](https://getbootstrap.com/docs/)
+- [Code Formatting](https://www.digitalocean.com/community/tutorials/how-to-format-code-with-prettier-in-visual-studio-code)
+- [StackHawk UseEffect](https://www.stackhawk.com/blog/react-cors-guide-what-it-is-and-how-to-enable-it/)
+- [W3 Schools Use CSS with React](https://www.w3schools.com/react/react_css.asp)
+- [Consume APIs with React](https://www.freecodecamp.org/news/how-to-consume-rest-apis-in-react/)
 
 # Future Work
 
 <!-- {Make a list of things that you need to fix, improve, and add in the future.} -->
-* Item 1
-* Item 2
-* Item 3
+
+- Item 1
+- Item 2
+- Item 3
