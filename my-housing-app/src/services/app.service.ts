@@ -28,13 +28,19 @@ export interface IComplexData {
 
 export interface IUnitData {
     rowid: number;
-    complex: number;
+    complex_id: number;
     unit_number: string;
     gender: string;
     room: string;
     bed: string;
     room_type: string;
     rent_price: number;
+    resident_id?: number;
+    unit_id?: number;
+    lease_start?: string;
+    lease_end?: string;
+    created_date?: string;
+    first_name?: string;
 }
 
 export class AppService {
@@ -67,9 +73,10 @@ export class AppService {
         }
     }
 
-    public async getUnitsByComplex(complexId: number) {
+    public async getUnitsByComplex(complexId: number, leaseStart?: string, leaseEnd?: string) {
+        let query = this.domain + leaseStart ? `/api/units-by-complex?complex_id=${complexId}&lease_start=${leaseStart}&lease_end=${leaseEnd}` : `/api/units-by-complex?complex_id=${complexId}`;
         try {
-            const response = await fetch(`${this.domain}/api/units-by-complex?complex_id=${complexId}`)
+            const response = await fetch(`${this.domain}/api/units-by-complex?complex_id=${complexId}&lease_start=${leaseStart}&lease_end=${leaseEnd}`)
             const data = await response.json();
             return data;
         }

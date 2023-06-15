@@ -41,6 +41,25 @@ function ListUnits({ units, heading }: ListUnitsProps) {
           >
             ${unit.rent_price}
           </ListGroup.Item>
+          <ListGroup.Item
+            as="li"
+            className={unit.rowid === selectedIndex ? "active" : ""}
+          >
+            {unit.first_name === null && <i>Vacant</i>}
+            {unit.first_name}
+          </ListGroup.Item>
+          <ListGroup.Item
+            as="li"
+            className={unit.rowid === selectedIndex ? "active" : ""}
+          >
+            {unit.lease_start}
+          </ListGroup.Item>
+          <ListGroup.Item
+            as="li"
+            className={unit.rowid === selectedIndex ? "active" : ""}
+          >
+            {unit.lease_end}
+          </ListGroup.Item>
         </ListGroup>
       ))}
     </>
