@@ -1,4 +1,4 @@
-import "../App.css";
+import "../App.scss";
 import { IResidentData } from "../services/app.service";
 
 interface LeaseCardProps {

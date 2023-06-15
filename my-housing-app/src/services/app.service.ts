@@ -19,14 +19,34 @@ export interface ILeaseData {
     created_date?: string;
 }
 
+export interface IComplexData {
+    rowid: number;
+    complex_name: string;
+    street_address: string;
+    type: string;
+}
+
+export interface IUnitData {
+    rowid: number;
+    complex: number;
+    unit_number: string;
+    gender: string;
+    room: string;
+    bed: string;
+    room_type: string;
+    rent_price: number;
+}
+
 export class AppService {
+    domain = "http://127.0.0.1:8000";
+
     public getAll() {
         return http.get<Array<IResidentData>>("/residents");
     }
 
     public async fetchAll() {
         try{
-            const response = await fetch('http://127.0.0.1:8000/api/residents/');
+            const response = await fetch(this.domain + '/api/residents/');
             const data = await response.json();
             // console.log({ data });
             return data;
@@ -34,6 +54,38 @@ export class AppService {
         catch (e) {
             console.log(e);
         }
-        
+    }
+
+    public async getAllComplexes() {
+        try {
+            const response = await fetch(this.domain + '/api/complexes/');
+            const data = await response.json();
+            return data;
+        } 
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    public async getUnitsByComplex(complexId: number) {
+        try {
+            const response = await fetch(`${this.domain}/api/units-by-complex?complex_id=${complexId}`)
+            const data = await response.json();
+            return data;
+        }
+        catch (e) {
+            console.log("Error in fetching data: ", e);
+        }
+    }
+
+    public async getLeases() {
+        try {
+            const response = await fetch(this.domain + '/api/leases/')
+            const data = await response.json();
+            return data;
+        }
+        catch (e) {
+            console.log(e);
+        }
     }
 }
