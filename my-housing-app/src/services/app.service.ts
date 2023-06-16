@@ -41,6 +41,7 @@ export interface IUnitData {
     lease_end?: string;
     created_date?: string;
     first_name?: string;
+    last_name?: string;
 }
 
 export class AppService {
@@ -90,6 +91,22 @@ export class AppService {
             const response = await fetch(this.domain + '/api/leases/')
             const data = await response.json();
             return data;
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    public async getResidentById(id: number) {
+        try {
+            if (id > 0) {
+                const response = await fetch(this.domain + '/api/residents/' + id)
+                const data = await response.json();
+                return data;
+            }
+            else {
+                return {}
+            } 
         }
         catch (e) {
             console.log(e);
