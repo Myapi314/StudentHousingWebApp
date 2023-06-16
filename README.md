@@ -37,6 +37,7 @@ npm run dev
 - [W3 Schools Use CSS with React](https://www.w3schools.com/react/react_css.asp)
 - [Consume APIs with React](https://www.freecodecamp.org/news/how-to-consume-rest-apis-in-react/)
 - [React-Bootstrap](https://react-bootstrap.github.io/docs/components/dropdowns)
+- [Hooks with setState](https://www.linkedin.com/pulse/provide-callback-usestate-hook-like-setstate-saransh-kataria/)
 
 # Future Work
 
