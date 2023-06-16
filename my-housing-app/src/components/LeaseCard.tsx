@@ -1,4 +1,6 @@
 import Button from "react-bootstrap/Button";
+import { useState } from "react";
+import Alert from "react-bootstrap/Alert";
 import "../App.scss";
 import { IResidentData } from "../services/app.service";
 
@@ -7,6 +9,19 @@ interface LeaseCardProps {
 }
 
 function LeaseCard({ resident }: LeaseCardProps) {
+  const [show, setShow] = useState(false);
+
+  if (show) {
+    return (
+      <Alert variant="warning" onClose={() => setShow(false)} dismissible>
+        <Alert.Heading>Sorry! We're not quite ready for you!</Alert.Heading>
+        <p>
+          The feature you tried to use is not quite ready yet. Thanks for
+          trying, come again soon for an update.
+        </p>
+      </Alert>
+    );
+  }
   return (
     <div className="card">
       <div className="card-body">
@@ -20,7 +35,10 @@ function LeaseCard({ resident }: LeaseCardProps) {
             Phone Number: {resident.phone} <br />
             Date of Birth: {resident.birthdate}
           </p>
-          <Button variant={resident.resident_id ? "success" : "info"}>
+          <Button
+            variant={resident.resident_id ? "success" : "info"}
+            onClick={() => setShow(true)}
+          >
             {resident.resident_id ? (
               <div>Edit</div>
             ) : (

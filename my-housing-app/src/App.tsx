@@ -5,12 +5,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import Navbar from "./components/Navbar";
 import DropdownComponent from "./components/Dropdown";
 import LeasePeriodComponent from "./components/LeasePeriods";
 import TableUnitsComponent from "./components/TableUnits";
 import SideDrawerComponent from "./components/SideDrawer";
 import LeaseCard from "./components/LeaseCard";
+import NavbarComponent from "./components/Navbar";
 
 let resident1 = {
   resident_id: 1,
@@ -111,7 +111,7 @@ function App() {
   return (
     <Container fluid="md">
       <Row>
-        <Navbar />
+        <NavbarComponent />
       </Row>
       <Row className="justify-content-md-left">
         <Col md="auto">
